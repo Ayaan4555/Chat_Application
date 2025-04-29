@@ -146,7 +146,7 @@ const Signup = () => {
             <InputGroup>
             <Input
                 type={show ? 'text':'password'}
-                placeholder='Enter Your Email'
+                placeholder='Enter Your Password'
                 onChange={(e)=> setPassword(e.target.value)}
             />
 
