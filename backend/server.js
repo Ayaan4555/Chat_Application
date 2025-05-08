@@ -57,7 +57,7 @@ const io = require("socket.io")(server, {
     cors: {
       origin: [
         "http://localhost:3000",
-        "https://your-frontend-domain.com" // ✅ Replace this with your actual deployed frontend domain
+        "https://chat-mate-s1dg.onrender.com" // ✅ Replace this with your actual deployed frontend domain
       ],
       credentials: true,
     },
