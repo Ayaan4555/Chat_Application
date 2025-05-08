@@ -53,15 +53,13 @@ const PORT = process.env.PORT || 5000
 
 const server = app.listen(PORT, console.log(`Server Started on PORT ${PORT}`.yellow.bold));
 
-const io = require("socket.io")(server, {
-    cors: {
-      origin: [
-        "http://localhost:3000",
-        "https://chat-mate-s1dg.onrender.com" // ✅ Replace this with your actual deployed frontend domain
-      ],
-      credentials: true,
-    },
-  });
+const io = require('socket.io')(server , {
+    pingTimeOut : 60000,
+    cors:{
+        origin: "http://localhost:3000",
+    }
+})
+  
 
 io.on("connection", (socket) => {
     console.log('connected to socket.io');

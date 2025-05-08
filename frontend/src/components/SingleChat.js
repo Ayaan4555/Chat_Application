@@ -12,9 +12,7 @@ import animationData from "../animations/typing.json";
 import ScrollableChat from './ScrollableChat';
 
 import io from 'socket.io-client';
-const ENDPOINT = import.meta.env.DEV
-  ? "http://localhost:5000"
-  : window.location.origin;
+const ENDPOINT = "http://localhost:5000";
 var socket , selectedChatCompare;
 
 const SingleChat = ({fetchAgain , setFetchAgain}) => {
